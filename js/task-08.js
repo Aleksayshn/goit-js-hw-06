@@ -14,6 +14,7 @@
 
 const form = document.querySelector('.login-form');
 form.addEventListener('submit', onTargetButtonSubmit);
+console.log(form.elements.email.value);
 
 function onTargetButtonSubmit(event) {
     const {
@@ -27,18 +28,19 @@ function onTargetButtonSubmit(event) {
 
     if (email.value === "" || password.value === "") {
         alert('All values must be filled')
+        return
     }
     const valuesForm = {
         email: `${email.value}`,
         password: `${password.value}`,
     }
+    
     console.log(valuesForm);
-
+    this.reset();
+    
     // new FormData(event.currentTarget).forEach((value, name) => {
     //   console.log({[name]: `${value}`})  
     // }
     // )
-
-    this.reset();
 }
 

@@ -8,7 +8,7 @@ fontSizeControl: document.querySelector("#font-size-control"),
 text: document.querySelector("#text"),
 }
 
-refs.fontSizeControl.addEventListener('change', onInputSlider);
+refs.fontSizeControl.addEventListener('input', onInputSlider);
 
 function onInputSlider(event) {
     refs.text.style.fontSize = event.currentTarget.value + 'px';

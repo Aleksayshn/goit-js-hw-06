@@ -15,17 +15,19 @@ refs.buttonDestroyEl.addEventListener('click', onbuttonDestroyClick);
 
 function onButtonCreateClick(event) {
   const newElements = []
+  let boxSize = 30;
 
   for (let i = 0; i < refs.inputEl.value; i++) {
     const newdivEl = document.createElement('div');
-    newdivEl.style.width = (30 + (i * 10)) + 'px';
-    newdivEl.style.height = (30 + (i * 10)) + 'px';
+    boxSize += 10;
+
+    newdivEl.style.width = boxSize + 'px';
+    newdivEl.style.height = boxSize + 'px';
     newdivEl.style.backgroundColor = getRandomHexColor();
     newElements.push(newdivEl);
   }
   refs.boxesEl.append(...newElements)
 }
-
 
 function onbuttonDestroyClick(event) {
   const allElementsRemove = document.querySelectorAll('#boxes div');

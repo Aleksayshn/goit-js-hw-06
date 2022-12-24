@@ -3,16 +3,16 @@
 
 const inputEl = document.querySelector('#validation-input');
 
+
 inputEl.addEventListener('blur', onInputBlurValid);
 function onInputBlurValid(event) {
-  console.log(this.value.length == this.dataset.length);
   if (this.value.length == this.dataset.length) {
     inputEl.classList.add('valid')
-    inputEl.classList.remove('invalid');
+    inputEl.classList.toggle('invalid');
   }
   else {
     inputEl.classList.add('invalid')
-    inputEl.classList.remove('valid');
+    inputEl.classList.toggle('valid');
   }
 }
 
