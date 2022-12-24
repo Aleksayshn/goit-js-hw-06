@@ -16,8 +16,7 @@ refs.buttonDestroyEl.addEventListener('click', onbuttonDestroyClick);
 function onButtonCreateClick(event) {
   const newElements = []
 
-  const a = refs.inputEl.value;
-  for (let i = 0; i < a; i++) {
+  for (let i = 0; i < refs.inputEl.value; i++) {
     const newdivEl = document.createElement('div');
     newdivEl.style.width = (30 + (i * 10)) + 'px';
     newdivEl.style.height = (30 + (i * 10)) + 'px';
@@ -30,6 +29,6 @@ function onButtonCreateClick(event) {
 
 function onbuttonDestroyClick(event) {
   const allElementsRemove = document.querySelectorAll('#boxes div');
-  allElementsRemove.forEach (el => el.remove()) 
+  allElementsRemove.forEach(el => el.remove())
   return
 }
