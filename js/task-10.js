@@ -8,13 +8,14 @@ const refs = {
   buttonDestroyEl: document.querySelector('[data-destroy]'),
   boxesEl: document.querySelector('#boxes'),
 }
-const newElements = []
 
-refs.buttonCreateEl.addEventListener('click', onButtonClick);
+refs.buttonCreateEl.addEventListener('click', onButtonCreateClick);
 refs.buttonDestroyEl.addEventListener('click', onbuttonDestroyClick);
 
 
-function onButtonClick(event) {
+function onButtonCreateClick(event) {
+  const newElements = []
+
   const a = refs.inputEl.value;
   for (let i = 0; i < a; i++) {
     const newdivEl = document.createElement('div');
@@ -30,41 +31,5 @@ function onButtonClick(event) {
 function onbuttonDestroyClick(event) {
   const allElementsRemove = document.querySelectorAll('#boxes div');
   allElementsRemove.forEach (el => el.remove()) 
+  return
 }
-
-
-
-  
-
-
-
-
-
-
-
-// let counterValue = [];
-
-// refs.inputEl.addEventListener('change', onInputChange);
-
-// function onInputChange() {
-//   counterValue.push(refs.inputEl.value)
-//   console.log(counterValue);
-//   refs.buttonCreateEl.addEventListener('click', onButtonClick);
-
-// }
-
-// function onButtonClick(event) {
-//   createBoxes()
-// }
-
-// function createBoxes() {
-//   const a = counterValue.map(el => {
-//     const b = document.createElement('div');
-//     b.style.backgroundColor = "red";
-// return b;
-//   }
-//   )
-//   return a;
-// }
-
-//   return refs.boxesEl.append(...a);
