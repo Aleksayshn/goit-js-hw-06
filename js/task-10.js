@@ -18,9 +18,8 @@ function onButtonClick(event) {
   const a = refs.inputEl.value;
   for (let i = 0; i < a; i++) {
     const newdivEl = document.createElement('div');
-    newdivEl.style.width = 30 + 'px';
-    newdivEl.style.height = 30 + 'px';
-    newdivEl.style.width = Number.parseInt(newdivEl.style.width) + 10 + 'px';
+    newdivEl.style.width = (30 + (i * 10)) + 'px';
+    newdivEl.style.height = (30 + (i * 10)) + 'px';
     newdivEl.style.backgroundColor = getRandomHexColor();
     newElements.push(newdivEl);
   }
