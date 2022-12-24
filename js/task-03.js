@@ -14,7 +14,7 @@ const images = [
 ];
 
 const makeGalleryMarkUp = ({url, alt}) => {
-  return `<img url="${url}" alt="${alt}">`
+  return `<img src="${url}" alt="${alt}" width="350">`
 }
 
 const makeGalleryItems = images.map(makeGalleryMarkUp).join(' ');    

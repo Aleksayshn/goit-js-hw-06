@@ -8,6 +8,7 @@ const ingredients = [
 ];
 
 const makeFruit = options => {
+  
 return options.map(option => {
   const fruitEl = document.createElement('li');
 fruitEl.classList.add('item');
