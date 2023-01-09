@@ -34,3 +34,5 @@ function onbuttonDestroyClick(event) {
   allElementsRemove.forEach(el => el.remove())
   return
 }
+
+

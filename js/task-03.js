@@ -13,11 +13,11 @@ const images = [
   },
 ];
 
-const makeGalleryMarkUp = ({url, alt}) => {
+const makeGalleryMarkUp = ({ url, alt }) => {
   return `<img src="${url}" alt="${alt}" width="350">`
 }
 
-const makeGalleryItems = images.map(makeGalleryMarkUp).join(' ');    
+const makeGalleryItems = images.map(makeGalleryMarkUp).join(' ');
 console.log(makeGalleryItems);
 
 document.querySelector('.gallery').insertAdjacentHTML("afterbegin", makeGalleryItems)

@@ -13,3 +13,13 @@ listEl.forEach(item => {
 //     const titleEl = el.querySelectorAll('ul>li')
 //     console.log(`Elements: ${titleEl.length}`);
 // }
+
+const user = {
+    name: {
+        color: {
+            more: 223453,
+        }
+    }
+}
+
+console.log(user?.name?.more);
